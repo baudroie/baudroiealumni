@@ -293,7 +293,7 @@ nav a:hover::after {
   position: relative;
   padding: 0;
   overflow: hidden;
-  padding-top: 80px; /* ヘッダーの高さ分余白を追加 */
+  padding-top: 90px; /* ヘッダーの高さ分余白を増やす */
 }
 
 .hero::before {
@@ -329,7 +329,29 @@ nav a:hover::after {
   color: var(--light);
   padding: 0 clamp(1.5rem, 5vw, 3rem);
   max-width: 900px;
-  margin-top: -80px; /* ヘッダーの高さ分上に移動して相殺 */
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0;
+  text-align: left;
+}
+
+.hero-content .nowrap {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.hero-btn-wrap {
+  text-align: left;
+  margin-left: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.15;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .hero-subtitle {
@@ -1195,8 +1217,26 @@ footer {
     justify-content: center;
   }
   
+  .hero {
+    padding-top: 70px;
+    height: auto;
+    min-height: 80vh;
+  }
   .hero-content {
+    padding: 0 1rem;
+    margin-top: 0;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btn-wrap {
+    text-align: center;
+    margin-left: auto;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
   }
   
   .button-secondary {
@@ -1244,10 +1284,11 @@ footer {
   <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tophaikei-1C3yQJS4FnGCSHovYza2fSNo1oCO4E.png" alt="ビジネスマンの握手シルエット" class="hero-bg" loading="lazy" />
   
   <div class="hero-content">
-    <h1 class="animate delay-1">出会いは一度きりじゃない。もう一度、baudroieへ。</h1>
+    <h1 class="animate delay-1">
+      <span class="nowrap">出会いは一度きりじゃない。</span><br>もう一度、baudroieへ。
+    </h1>
     <p class="hero-subtitle animate delay-2">あなたの"次の挑戦"を、ここで再起動しませんか？<br>共に"次章"を書きましょう。</p>
-    
-    <div class="animate delay-3">
+    <div class="animate delay-3 hero-btn-wrap">
       <a href="https://s.lmes.jp/landing-qr/1657893371-rRVdmjzQ?uLand=TjlDfR" class="button">15分でカジュアル相談してみる <span class="button-icon">→</span></a>
     </div>
   </div>
@@ -1536,8 +1577,6 @@ footer {
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
             <line x1="16" y1="2" x2="16" y2="6"></line>
             <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg  x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
         </div>
