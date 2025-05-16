@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アルムナイ採用 | baudroie inc.</title>
+<meta name="description" content="baudroie inc.のアルムナイ（内定辞退者）採用サイト。あなたの'その先'のキャリア、ここから再起動しませんか？">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== 基本設定 ===== */
+:root {
+  --brand: #ff7a00;
+  --brand-light: #ff9a40;
+  --brand-dark: #e56e00;
+  --brand-gradient: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  --dark: #111827;
+  --dark-blue: #1e293b;
+  --light: #fdfbf9;
+  --gray: #4b5563;
+  --light-gray: #f9fafb;
+  --shadow: 0 10px 30px rgba(0,0,0,.05);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.1);
+  --shadow-brand: 0 10px 25px rgba(255, 122, 0, 0.25);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.7;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 6rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--brand-gradient);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+h2:hover::after {
+  width: 100%;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  scroll-margin-top: 6rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+section {
+  padding: clamp(5rem, 15vh, 10rem) clamp(1.5rem, 5vw, 3rem);
+  position: relative;
+}
+
+section:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.section-intro p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+/* ===== アニメーション ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes arrowSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(5px); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* ===== ヘッダー ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--brand);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+header.scrolled {
+  padding: 0.7rem clamp(1rem, 4vw, 3rem);
+}
+
+.header-logo {
+  display: block;
+  height: 40px;
+}
+
+.header-logo img {
+  height: 100%;
+  width: auto;
+  border-radius: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+nav a:hover {
+  color: var(--dark);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--light);
+  transition: var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light);
+  margin: 6px 0;
+  transition: var(--transition);
+}
+
+.nav-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ヒーローセクション ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  padding-top: 80px; /* ヘッダーの高さ分余白を追加 */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.2) contrast(1.1);
+  transform: scale(1.05);
+  transition: transform 10s ease;
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--light);
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  max-width: 900px;
+  margin-top: -80px; /* ヘッダーの高さ分上に移動して相殺 */
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-bottom: 3rem;
+  font-weight: 500;
+  opacity: 0.9;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-gradient);
+  background-size: 200% auto;
+  color: var(--light);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-brand);
+  letter-spacing: 0.03em;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-position: right center;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 122, 0, 0.3);
+}
+
+.button:hover::before {
+  left: 100%;
+  transition: 0.7s;
+}
+
+.button:focus {
+  outline: 3px solid rgba(255, 122, 0, 0.4);
+  outline-offset: 2px;
+}
+
+.button-icon {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.button:hover .button-icon {
+  animation: arrowSlide 0.5s alternate infinite;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 2px solid var(--light);
+  margin-left: 1rem;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.button-secondary:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== メリットセクション ===== */
+.merit-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--brand-gradient);
+  background-size: 200% auto;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card:hover::before {
+  background-position: right center;
+  height: 7px;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.1) 0%, rgba(255, 154, 64, 0.2) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--brand);
+  font-size: 1.8rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(-5deg);
+  background: var(--brand-gradient);
+  color: white;
+}
+
+.card-icon::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.card:hover .card-icon::after {
+  animation: shine 1.5s ease;
+  opacity: 1;
+}
+
+.card-title {
+  color: var(--brand-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.card:hover .card-title {
+  color: var(--brand);
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.card:hover .card-footer {
+  border-top-color: rgba(255, 122, 0, 0.1);
+}
+
+.card-stat {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  transition: var(--transition);
+}
+
+.card:hover .card-stat {
+  background-position: right center;
+  transform: scale(1.05);
+}
+
+.card-stat-label {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* ===== ストーリーセクション ===== */
+.story {
+  background: linear-gradient(135deg, var(--brand) 0%, #ff9f40 100%);
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+  color: var(--light);
+  overflow: hidden;
+}
+
+.story h2 {
+  color: var(--light);
+}
+
+.story h2::after {
+  background-color: var(--light);
+}
+
+.story-container {
+  position: relative;
+}
+
+.story-bg {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 1;
+  transform: rotate(30deg);
+  animation: float 15s ease-in-out infinite;
+}
+
+/* アルムナイストーリーカード */
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.story-card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.story-card-header {
+  padding: 2rem;
+  position: relative;
+}
+
+.story-card-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--brand);
+  margin: 0 auto 1.5rem;
+  transition: var(--transition);
+}
+
+.story-card:hover .story-card-img {
+  transform: scale(1.05);
+  border-width: 6px;
+}
+
+.story-card-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--brand-gradient);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.story-card:hover .story-card-badge {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.story-card-title {
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.story-card-subtitle {
+  font-size: 0.9rem;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.story-card-quote {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.story-card-quote::before,
+.story-card-quote::after {
+  content: '"';
+  color: var(--brand-light);
+  font-size: 1.5rem;
+}
+
+.story-card-content {
+  padding: 0 2rem 2rem;
+  color: var(--dark);
+  flex-grow: 1;
+}
+
+.story-card-meta {
+  background-color: rgba(255, 122, 0, 0.05);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.story-card-meta-item {
+  font-size: 0.85rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.story-card-meta-icon {
+  color: var(--brand);
+}
+
+/* ===== プロセスセクション ===== */
+.process-container {
+  position: relative;
+}
+
+.process-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff7a00' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  counter-reset: step;
+  position: relative;
+  z-index: 2;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(255, 122, 0, 0.05) 0%, rgba(255, 122, 0, 0.2) 50%, rgba(255, 122, 0, 0.05) 100%);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.step {
+  position: relative;
+  padding: 3rem 2rem 2rem;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  counter-increment: step;
+  transition: var(--transition);
+  text-align: center;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.step:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: var(--brand-gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(255, 122, 0, 0.3);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.step:hover::before {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 15px 30px rgba(255, 122, 0, 0.4);
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: var(--brand);
+  margin-bottom: 1.5rem;
+  display: block;
+  transition: var(--transition);
+}
+
+.step:hover .step-icon {
+  transform: scale(1.1);
+  color: var(--brand-dark);
+}
+
+.step h3 {
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.step:hover h3 {
+  color: var(--brand);
+}
+
+.step-features {
+  list-style: none;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.step-features li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: var(--transition);
+}
+
+.step-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.step:hover .step-features li {
+  transform: translateX(5px);
+}
+
+.step:hover .step-features li::before {
+  color: var(--brand-dark);
+}
+
+/* ===== Q&A ===== */
+.qa-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 122, 0, 0.02);
+}
+
+.faq-question {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  color: var(--brand);
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.8rem;
+  color: var(--brand);
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-question {
+  color: var(--brand);
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  padding: 0 1.5rem;
+  color: var(--gray);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem;
+  transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+/* ===== エントリーセクション ===== */
+.entry {
+  background-color: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.entry-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.05) 0%, rgba(255, 122, 0, 0.1) 100%);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+  animation: float 15s ease-in-out infinite;
+}
+
+/* エントリーカード */
+.entry-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.entry-card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.entry-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-lg);
+}
+
+.entry-card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.1) 0%, rgba(255, 154, 64, 0.2) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--brand);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.entry-card:hover .entry-card-icon {
+  transform: scale(1.1) rotate(-5deg);
+  background: var(--brand-gradient);
+  color: white;
+}
+
+.entry-card h3 {
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.entry-card:hover h3 {
+  color: var(--brand);
+}
+
+.entry-card p {
+  margin-bottom: 2rem;
+  color: var(--gray);
+}
+
+/* ===== モーダル ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  transform: translateY(30px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-icon {
+  font-size: 4rem;
+  color: var(--brand);
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray);
+  transition: var(--transition);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  color: var(--dark);
+  transform: rotate(90deg);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ===== フッター ===== */
+footer {
+  background-color: var(--brand);
+  color: var(--light);
+  padding: 3rem clamp(1.5rem, 5vw, 3rem) 2rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto 1rem;
+  transition: var(--transition);
+  max-width: 200px;
+  height: auto;
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* タイトル中央揃え用 */
+.title-center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .merit-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-steps::before {
+    display: none;
+  }
+  
+  .story-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--brand);
+    transition: var(--transition);
+    padding: 6rem 2rem 2rem;
+    z-index: 1000;
+  }
+  
+  nav.active {
+    right: 0;
+  }
+  
+  .nav-close {
+    display: block;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
+  }
+  
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  
+  .merit-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .entry-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .button-secondary {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .story-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .entry-card {
+    padding: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+<header id="header">
+  <a href="https://www.baudroie.jp/" class="header-logo">
+    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/baudroielogo-gqCPrFBtvobpVYJ8aclMn6KpaqsCCn.png" alt="baudroie inc." width="200">
+  </a>
+  
+  <button class="hamburger" aria-label="メニュー" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <nav>
+    <button class="nav-close">← 戻る</button>
+    <ul>
+      <li><a href="#merit">メリット</a></li>
+      <li><a href="#story">ストーリー</a></li>
+      <li><a href="#process">採用プロセス</a></li>
+      <li><a href="#qa">Q&A</a></li>
+      <li><a href="#entry">エントリー</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tophaikei-1C3yQJS4FnGCSHovYza2fSNo1oCO4E.png" alt="ビジネスマンの握手シルエット" class="hero-bg" loading="lazy" />
+  
+  <div class="hero-content">
+    <h1 class="animate delay-1">出会いは一度きりじゃない。もう一度、baudroieへ。</h1>
+    <p class="hero-subtitle animate delay-2">あなたの"次の挑戦"を、ここで再起動しませんか？<br>共に"次章"を書きましょう。</p>
+    
+    <div class="animate delay-3">
+      <a href="https://s.lmes.jp/landing-qr/1657893371-rRVdmjzQ?uLand=TjlDfR" class="button">15分でカジュアル相談してみる <span class="button-icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="merit">
+  <div class="container">
+    <div class="section-intro">
+      <h2>「再就職」ではなく、<br><span class="title-center">キャリアの再起動（リブート）</span></h2>
+      <p>baudroie inc.に戻ってくる理由。それは単なる「再就職」ではなく、キャリアの再起動（リブート）です。最新インフラに挑む仲間と共に、もう一度――いや、前より大胆に――自分の可能性を更新しませんか。</p>
+    </div>
+    
+    <div class="merit-cards">
+      <div class="card animate">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">会社は進化しています</h3>
+          <p>baudroie inc.は、あなたが内定をいただいた時から大きく変わりました。2021年11月30日に、東京証券取引所 マザーズ（現グロース）市場へ上場し、2025年3月10日にプライム市場へ鞍替えしました。現在社員数は1000名を超え、教育プログラムの拡充、新規プロジェクトの増加など、働く環境も、キャリアの可能性も広がっています。</p>
+          <p>あの時とは違う環境で、あなたの才能を発揮できる場所が広がっています。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-stat">2025</div>
+          <div class="card-stat-label">プライム上場年</div>
+        </div>
+      </div>
+      
+      <div class="card animate delay-2">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">元・内定辞退者の再入社実績 42名</h3>
+          <p>これまでに42名の「アルムナイ」が baudroie inc. に戻ってきました。一度は別の道を選んだ方々が、その経験を活かして活躍しています。あなたの「その先」の経験が、私たちの財産になります。</p>
+          <p>多様なキャリアパスを経た仲間と共に、新たな価値を創造できます。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-stat">42名</div>
+          <div class="card-stat-label">アルムナイ入社実績</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="container story-container">
+    <div class="story-bg"></div>
+    
+    <div class="section-intro">
+      <h2>アルムナイ Story</h2>
+      <p style="color: white;">一度は別の道を選んだ先輩たちが、なぜbaudroie inc.に戻ってきたのか。<br>その理由と、今の活躍をご紹介します。</p>
+    </div>
+    
+    <div class="story-cards">
+      <div class="story-card animate">
+        <div class="story-card-header">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_YD-m49wckGACjruZMBQ0uWzqykbiRyAHg.png" alt="Y D" class="story-card-img" loading="lazy">
+          <h3 class="story-card-title">Y D（25）</h3>
+          <p class="story-card-subtitle">クラウドインフラチーム</p>
+          <p class="story-card-quote">一度断った身でも、ここは"仲間"として迎えてくれた。</p>
+        </div>
+        <div class="story-card-content">
+          <p>新卒時に内定をいただきながらも、大手企業の安定を選びました。しかし2年間のSE経験を経て、もっと最先端の技術に触れたいと考えるようになり、再びbaudroie inc.の門を叩きました。驚いたことに、快く迎え入れてくれただけでなく、前職での経験を高く評価してくれました。今はクラウドインフラチームで、大規模プロジェクトを任されています。</p>
+        </div>
+        <div class="story-card-meta">
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">🎓</span>
+            <span>東洋大学 経済学部 2022年卒</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">💼</span>
+            <span>前職：大手SIer（SE）</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">📅</span>
+            <span>2024/03 入社</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-card animate delay-1">
+        <div class="story-card-header">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_SM-MLuyq5upTRU08Y2ulsdICZBTrSZ7lW.png" alt="S M" class="story-card-img" loading="lazy">
+          <div class="story-card-badge">PM</div>
+          <h3 class="story-card-title">S M（27）</h3>
+          <p class="story-card-subtitle">プロダクトマネージャー</p>
+          <p class="story-card-quote">やり残した"挑戦"を、今取り返せています。</p>
+        </div>
+        <div class="story-card-content">
+          <p>コンサルタントとしてのキャリアは充実していましたが、常に「もっと手を動かしてプロダクトを作りたい」という思いがありました。学生時代に内定をいただいたbaudroie inc.を思い出し、連絡してみたところ、アルムナイ採用の枠で迎え入れていただきました。今はPMとして、コンサル時代の経験を活かしながら、自分の手でプロダクトを育てる喜びを感じています。</p>
+        </div>
+        <div class="story-card-meta">
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">🎓</span>
+            <span>青山学院大学 国際政治経済学部 2020年卒</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">💼</span>
+            <span>前職：外資系コンサル</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">📅</span>
+            <span>2023/09 入社</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-card animate delay-2">
+        <div class="story-card-header">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_TD-7A24XzrS0aqF094VOBalcDIB8Pxm8D.png" alt="T D" class="story-card-img" loading="lazy">
+          <div class="story-card-badge">Eng</div>
+          <h3 class="story-card-title">T D（29）</h3>
+          <p class="story-card-subtitle">インフラエンジニア</p>
+          <p class="story-card-quote">ここでは「前職での経験」が武器になる。</p>
+        </div>
+        <div class="story-card-content">
+          <p>新卒で大手メーカーに入社し、社内SEとして5年間勤務しました。技術的な成長に限界を感じていた時、学生時代に内定をいただいていたbaudroie inc.の採用担当者からLinkedInでメッセージをいただきました。「アルムナイ枠で戻ってきませんか？」という言葉に背中を押され、転職を決意。今は社内SEとして培った「ユーザー視点」を活かし、より使いやすいインフラ設計に取り組んでいます。</p>
+        </div>
+        <div class="story-card-meta">
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">🎓</span>
+            <span>東京工業大学 情報工学科 2018年卒</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">💼</span>
+            <span>前職：大手メーカー（社内SE）</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">📅</span>
+            <span>2023/04 入社</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container process-container">
+    <div class="process-bg"></div>
+    
+    <div class="section-intro">
+      <h2>採用プロセス</h2>
+      <p>複雑な選考は一切なし。あなたのキャリアを最短距離で再起動します。</p>
+    </div>
+    
+    <div class="process-steps">
+      <div class="step animate">
+        <span class="step-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </span>
+        <h3>カジュアル相談（15min）</h3>
+        <p>まずは気軽に15分、オンラインでキャリア相談。あなたの現状や希望をお聞かせください。</p>
+        
+        <ul class="step-features">
+          <li>オンライン可</li>
+          <li>所要時間：15分程度</li>
+          <li>服装自由、リラックスした雰囲気で</li>
+          <li>選考ではなく、純粋な相談の場</li>
+        </ul>
+      </div>
+      
+      <div class="step animate delay-1">
+        <span class="step-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </span>
+        <h3>"カムバック面接" – 60min で相互理解</h3>
+        <p>これが唯一の選考。久しぶりの再会を楽しみつつ、あなたが違う場所で得た経験や視点をぜひ聞かせてください。あなたの経験と baudroie inc. の文化との相性を確認します。</p>
+        
+        <ul class="step-features">
+          <li>所要時間：60分</li>
+          <li>オンライン/オフィス訪問 選択可</li>
+          <li>即日フィードバック</li>
+        </ul>
+      </div>
+      
+      <div class="step animate delay-2">
+        <span class="step-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </span>
+        <h3>オファー再有効化</h3>
+        <p>面接後、最短即日でオファーを再有効化。あなたの「次の挑戦」をすぐに始められます。</p>
+        
+        <ul class="step-features">
+          <li>最短即日でオファー</li>
+          <li>入社日は柔軟に調整可能</li>
+          <li>スムーズな再スタートをサポート</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qa">
+  <div class="container qa-container">
+    <div class="section-intro">
+      <h2>Q&A</h2>
+      <p>アルムナイ採用についてよくある質問にお答えします。</p>
+    </div>
+    
+    <div class="faq">
+      <div class="faq-item active">
+        <div class="faq-question">一度辞退した内定でも応募できますか？</div>
+        <div class="faq-answer">
+          <p>はい、もちろん可能です。一度辞退された方も、内定を辞退された方も、ぜひお気軽にご応募ください。baudroie inc.では、様々な経験を経た方々の「再挑戦」を歓迎しています。</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">どのくらいの期間が経っていても応募できますか？</div>
+        <div class="faq-answer">
+          <p>期間に制限はありません。新卒時に内定を辞退された方も、一度入社後に退職された方も、時間が経っていても歓迎します。むしろ、その間に得られた経験や視点を高く評価しています。</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">前職と全く違う職種でも応募できますか？</div>
+        <div class="faq-answer">
+          <p>はい、可能です。baudroie inc.では、多様なバックグラウンドを持つ方々の経験を尊重しています。前職での経験を活かしつつ、新しい挑戦をしたい方を応援します。キャリアチェンジをご希望の方も、ぜひご相談ください。</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">アルムナイ採用の選考基準はどのようなものですか？</div>
+        <div class="faq-answer">
+          <p>主に以下の点を重視しています：</p>
+          <ol>
+            <li>これまでの経験から得た学びや成長</li>
+            <li>新しい挑戦への意欲と姿勢</li>
+          </ol>
+          <p>技術的なスキルだけでなく、多様な経験を通じて培われた視点や考え方を評価します。</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="qa-cta">
+      <a href="#entry" class="button">カジュアル相談に申し込む <span class="button-icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="entry" class="entry">
+  <div class="entry-bg"></div>
+  
+  <div class="container">
+    <div class="section-intro">
+      <h2>エントリー</h2>
+      <p>まずは気軽に15分のカジュアル相談から。あなたの「次の挑戦」を一緒に考えましょう。</p>
+    </div>
+    
+    <div class="entry-cards">
+      <div class="entry-card animate">
+        <div class="entry-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h3>カジュアル相談に申し込む</h3>
+        <p>お気軽にご連絡ください。担当者から折り返しご連絡いたします。</p>
+        <a href="https://s.lmes.jp/landing-qr/1657893371-rRVdmjzQ?uLand=TjlDfR" class="button">カジュアル相談に申し込む <span class="button-icon">→</span></a>
+      </div>
+      
+      <div class="entry-card animate delay-1">
+        <div class="entry-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg  x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h3>カムバック面接に申し込む</h3>
+        <p>すぐに選考を希望される方は、<br>こちらからカムバック面接にお申し込みください。</p>
+        <a href="https://s.lmes.jp/landing-qr/1657893371-rRVdmjzQ?uLand=TjlDfR" class="button">カムバック面接に申し込む <span class="button-icon">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bg"></div>
+  
+  <div class="container">
+    <a href="https://www.baudroie.jp/" class="footer-logo">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/baudroielogo-gqCPrFBtvobpVYJ8aclMn6KpaqsCCn.png" alt="baudroie inc." class="footer-logo-img">
+    </a>
+  </div>
+</footer>
+
+<div class="modal" id="thanks-modal">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="閉じる">×</button>
+    <div class="modal-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <h3>お申し込みありがとうございます</h3>
+    <p>カジュアル相談のお申し込みを受け付けました。<br>担当者から1営業日以内にご連絡いたします。</p>
+    <button class="button">閉じる</button>
+  </div>
+</div>
+
+<script>
+  // ヘッダースクロール効果
+  window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
+  // ハンバーガーメニュー
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+  const navClose = document.querySelector('.nav-close');
+  
+  hamburger.addEventListener('click', function() {
+    nav.classList.add('active');
+    hamburger.classList.add('active');
+  });
+  
+  navClose.addEventListener('click', function() {
+    nav.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+  
+  // ナビゲーションリンククリック時にメニューを閉じる
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+  
+  // FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // 現在のアイテムの状態を切り替え
+      item.classList.toggle('active');
+      
+      // 他のアイテムを閉じる（アコーディオン動作）
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+    });
+  });
+  
+  // モーダル
+  const thanksModal = document.getElementById('thanks-modal');
+  const modalClose = document.querySelector('.modal-close');
+  const modalCloseBtn = thanksModal.querySelector('.button');
+  
+  // モーダルを閉じる
+  modalClose.addEventListener('click', function() {
+    thanksModal.classList.remove('active');
+  });
+  
+  modalCloseBtn.addEventListener('click', function() {
+    thanksModal.classList.remove('active');
+  });
+  
+  // アニメーション要素の表示
+  const animateElements = document.querySelectorAll('.animate');
+  
+  function checkIfInView() {
+    animateElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const elementVisible = 150;
+      
+      if (elementTop < window.innerHeight - elementVisible) {
+        element.style.opacity = 1;
+      }
+    });
+  }
+  
+  // 初期チェック
+  window.addEventListener('load', checkIfInView);
+  
+  // スクロール時にチェック
+  window.addEventListener('scroll', checkIfInView);
+</script>
+</body>
+</html>
