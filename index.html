@@ -605,7 +605,7 @@ nav a:hover::after {
 /* アルムナイストーリーカード */
 .story-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 常に3列 */
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1353,20 +1353,73 @@ footer {
     </div>
     
     <div class="story-cards">
+      <!-- TDカード（元YDの位置） -->
       <div class="story-card animate">
         <div class="story-card-header">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_YD-m49wckGACjruZMBQ0uWzqykbiRyAHg.png" alt="Y D" class="story-card-img" loading="lazy">
-          <h3 class="story-card-title">Y D（25）</h3>
-          <p class="story-card-subtitle">クラウドインフラチーム</p>
-          <p class="story-card-quote">一度断った身でも、ここは"仲間"として迎えてくれた。</p>
+          <img src="https://drive.google.com/uc?export=view&id=1QEGGPFeLXUOeTEe-hC9oRyLAMEF7iDg6" alt="T D" class="story-card-img" loading="lazy">
+          <h3 class="story-card-title">T D（29）</h3>
+          <p class="story-card-subtitle">インフラエンジニア</p>
+          <p class="story-card-quote">好きだけでは働けない。本当のワークライフバランス。</p>
         </div>
         <div class="story-card-content">
-          <p>新卒時に内定をいただきながらも、大手企業の安定を選びました。しかし2年間のSE経験を経て、もっと最先端の技術に触れたいと考えるようになり、再びbaudroie inc.の門を叩きました。驚いたことに、快く迎え入れてくれただけでなく、前職での経験を高く評価してくれました。今はクラウドインフラチームで、大規模プロジェクトを任されています。</p>
+          <p>服が好きでアパレル企業に入りましたが、休日返上の毎日。深夜まで働いても残業代は出ず、体力的にも精神的にも限界に。好きなことは趣味にしようと気持ちを切り替え、以前内定をいただいていたボードルアに連絡。未経験から始められる環境で再スタートし、今はワークライフバランスも整い、毎日を前向きに過ごせています。</p>
         </div>
         <div class="story-card-meta">
           <div class="story-card-meta-item">
             <span class="story-card-meta-icon">🎓</span>
-            <span>東洋大学 経済学部 2022年卒</span>
+            <span>東洋大学 社会学部卒 2018年卒</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">💼</span>
+            <span>前職：アパレル販売員</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">📅</span>
+            <span>2023/04 入社</span>
+          </div>
+        </div>
+      </div>
+      <!-- SMカード（バッジ削除） -->
+      <div class="story-card animate delay-1">
+        <div class="story-card-header">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_SM-MLuyq5upTRU08Y2ulsdICZBTrSZ7lW.png" alt="S M" class="story-card-img" loading="lazy">
+          <h3 class="story-card-title">S M（27）</h3>
+          <p class="story-card-subtitle">プロジェクトマネージャー</p>
+          <p class="story-card-quote">給与だけでは得られないものがあると実感した</p>
+        </div>
+        <div class="story-card-content">
+          <p>初任給が高く「稼げる」と聞いて入社した会社でしたが、実際は数字だけが評価基準の個人プレー。ノルマとプレッシャーに追われ、次第に人間関係もギスギスし退職。改めて「仲間と支え合える職場」を探す中で、選考時に温かさを感じていたボードルアを思い出しました。今はチームで助け合いながら、安心して成長できています。</p>
+        </div>
+        <div class="story-card-meta">
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">🎓</span>
+            <span>専修大学 経営学部卒 2020年卒</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">💼</span>
+            <span>前職：不動産営業</span>
+          </div>
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">📅</span>
+            <span>2023/09 入社</span>
+          </div>
+        </div>
+      </div>
+      <!-- YDカード（元TDの位置） -->
+      <div class="story-card animate delay-2">
+        <div class="story-card-header">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_YD-m49wckGACjruZMBQ0uWzqykbiRyAHg.png" alt="Y D" class="story-card-img" loading="lazy">
+          <h3 class="story-card-title">Y D（25）</h3>
+          <p class="story-card-subtitle">クラウドインフラチーム</p>
+          <p class="story-card-quote">ネームバリューではわからない。働く環境が何より大事</p>
+        </div>
+        <div class="story-card-content">
+          <p>「規模も大きくて安心そう」と感じたIT企業に就職しましたが、配属されたのは希望と違うサポート系部署。異動の相談をしても3年先と言われ、キャリアが積めない焦りから退職を決意。以前内定をもらっていたボードルアに相談したところ、面談で一緒にキャリアを考えてくれ、未経験からインフラエンジニアとして再スタートできました。</p>
+        </div>
+        <div class="story-card-meta">
+          <div class="story-card-meta-item">
+            <span class="story-card-meta-icon">🎓</span>
+            <span>駒澤大学 経済学部卒 2022年卒</span>
           </div>
           <div class="story-card-meta-item">
             <span class="story-card-meta-icon">💼</span>
@@ -1375,60 +1428,6 @@ footer {
           <div class="story-card-meta-item">
             <span class="story-card-meta-icon">📅</span>
             <span>2024/03 入社</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="story-card animate delay-1">
-        <div class="story-card-header">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_SM-MLuyq5upTRU08Y2ulsdICZBTrSZ7lW.png" alt="S M" class="story-card-img" loading="lazy">
-          <div class="story-card-badge">PM</div>
-          <h3 class="story-card-title">S M（27）</h3>
-          <p class="story-card-subtitle">プロダクトマネージャー</p>
-          <p class="story-card-quote">やり残した"挑戦"を、今取り返せています。</p>
-        </div>
-        <div class="story-card-content">
-          <p>コンサルタントとしてのキャリアは充実していましたが、常に「もっと手を動かしてプロダクトを作りたい」という思いがありました。学生時代に内定をいただいたbaudroie inc.を思い出し、連絡してみたところ、アルムナイ採用の枠で迎え入れていただきました。今はPMとして、コンサル時代の経験を活かしながら、自分の手でプロダクトを育てる喜びを感じています。</p>
-        </div>
-        <div class="story-card-meta">
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">🎓</span>
-            <span>青山学院大学 国際政治経済学部 2020年卒</span>
-          </div>
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">💼</span>
-            <span>前職：外資系コンサル</span>
-          </div>
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">📅</span>
-            <span>2023/09 入社</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="story-card animate delay-2">
-        <div class="story-card-header">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/human_TD-7A24XzrS0aqF094VOBalcDIB8Pxm8D.png" alt="T D" class="story-card-img" loading="lazy">
-          <div class="story-card-badge">Eng</div>
-          <h3 class="story-card-title">T D（29）</h3>
-          <p class="story-card-subtitle">インフラエンジニア</p>
-          <p class="story-card-quote">ここでは「前職での経験」が武器になる。</p>
-        </div>
-        <div class="story-card-content">
-          <p>新卒で大手メーカーに入社し、社内SEとして5年間勤務しました。技術的な成長に限界を感じていた時、学生時代に内定をいただいていたbaudroie inc.の採用担当者からLinkedInでメッセージをいただきました。「アルムナイ枠で戻ってきませんか？」という言葉に背中を押され、転職を決意。今は社内SEとして培った「ユーザー視点」を活かし、より使いやすいインフラ設計に取り組んでいます。</p>
-        </div>
-        <div class="story-card-meta">
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">🎓</span>
-            <span>東京工業大学 情報工学科 2018年卒</span>
-          </div>
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">💼</span>
-            <span>前職：大手メーカー（社内SE）</span>
-          </div>
-          <div class="story-card-meta-item">
-            <span class="story-card-meta-icon">📅</span>
-            <span>2023/04 入社</span>
           </div>
         </div>
       </div>
