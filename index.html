@@ -311,12 +311,16 @@ nav a:hover::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
+  object-position: center top;
   filter: saturate(1.2) contrast(1.1);
   transform: scale(1.05);
   transition: transform 10s ease;
+  z-index: 1;
+  max-width: unset;
+  max-height: unset;
 }
 
 .hero:hover .hero-bg {
@@ -1247,6 +1251,11 @@ footer {
   .story-cards {
     grid-template-columns: 1fr;
   }
+  
+  .hero-bg {
+    height: 60vh;
+    object-position: center 20%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1356,7 +1365,7 @@ footer {
       <!-- TDカード（元YDの位置） -->
       <div class="story-card animate">
         <div class="story-card-header">
-         <img src="https://raw.githubusercontent.com/baudroie/baudroiealumni/main/human_TD.png" alt="T D" class="story-card-img" loading="lazy">
+          <img src="images/team/human_TD.png" alt="T D" class="story-card-img" loading="lazy">
           <h3 class="story-card-title">T D（29）</h3>
           <p class="story-card-subtitle">インフラエンジニア</p>
           <p class="story-card-quote">好きだけでは働けない。本当のワークライフバランス。</p>
