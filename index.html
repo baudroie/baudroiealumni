@@ -307,6 +307,9 @@ nav a:hover::after {
   z-index: 1;
 }
 
+.hero-bg-mobile { display: none; }
+.hero-bg-pc { display: block; }
+
 .hero-bg {
   position: absolute;
   top: 0;
@@ -1252,13 +1255,8 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  .hero-bg {
-    height: 80vh;
-    object-position: center 30%;
-  }
-  .hero::before {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
-  }
+  .hero-bg-mobile { display: block; }
+  .hero-bg-pc { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -1293,7 +1291,8 @@ footer {
 </header>
 
 <section class="hero">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tophaikei-1C3yQJS4FnGCSHovYza2fSNo1oCO4E.png" alt="ビジネスマンの握手シルエット" class="hero-bg" loading="lazy" />
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tophaikei-1C3yQJS4FnGCSHovYza2fSNo1oCO4E.png" alt="ビジネスマンの握手シルエット" class="hero-bg hero-bg-pc" loading="lazy" />
+  <img src="topsmaho.png" alt="ビジネスマンの握手シルエット（スマホ）" class="hero-bg hero-bg-mobile" loading="lazy" />
   
   <div class="hero-content">
     <h1 class="animate delay-1">
